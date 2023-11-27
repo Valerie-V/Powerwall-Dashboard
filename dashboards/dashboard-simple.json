@@ -142,7 +142,7 @@
         "Charge": "red",
         "Grid Usage": "purple",
         "Home Usage": "blue",
-        "Powerwall": "green",
+        "Powercube": "green",
         "Solar Energy": "yellow",
         "Sun altitude": "rgb(192, 192, 192)"
       },
@@ -292,7 +292,7 @@
           "tz": "$tz"
         },
         {
-          "alias": "Powerwall",
+          "alias": "Powercube",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
@@ -564,7 +564,7 @@
           "tz": "$tz"
         }
       ],
-      "title": "Powerwall",
+      "title": "Powercube",
       "transparent": true,
       "type": "bargauge"
     },
@@ -573,12 +573,12 @@
         "Battery": "#73BF69",
         "Battery Usage": "#73BF69",
         "From Grid": "#B877D9",
-        "From Powerwall": "#73BF69",
+        "From Powercube": "#73BF69",
         "From Solar": "#FADE2A",
         "Grid": "#B877D9",
         "Grid Usage": "#B877D9",
-        "Powerwall": "#73BF69",
-        "Powerwall Usage": "#73BF69",
+        "Powercube": "#73BF69",
+        "Powercube Usage": "#73BF69",
         "Solar": "#FADE2A",
         "Solar Usage": "#FADE2A",
         "Total Solar": "#FADE2A",
@@ -661,7 +661,7 @@
           "tags": []
         },
         {
-          "alias": "From Powerwall",
+          "alias": "From Powercube",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
@@ -807,7 +807,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "powerwall > home",
+          "alias": "Powercube > home",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
@@ -1169,7 +1169,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "SELECT last(\"battery_instant_power\")  / 1000 AS \"Powerwall\", last(\"solar_instant_power\")  / 1000 AS \"Solar\", last(\"load_instant_power\")  / 1000 AS \"Home\", last(\"site_instant_power\")  / 1000 AS \"Grid\" FROM \"raw\".\"http\" WHERE time >= now() - 1m",
+          "query": "SELECT last(\"battery_instant_power\")  / 1000 AS \"Powercube\", last(\"solar_instant_power\")  / 1000 AS \"Solar\", last(\"load_instant_power\")  / 1000 AS \"Home\", last(\"site_instant_power\")  / 1000 AS \"Grid\" FROM \"raw\".\"http\" WHERE time >= now() - 1m",
           "rawQuery": true,
           "refId": "A",
           "resultFormat": "time_series"
@@ -1381,7 +1381,7 @@
           "tz": "$tz"
         }
       ],
-      "title": "From Powerwall",
+      "title": "From Powercube",
       "transparent": true,
       "type": "stat"
     },
@@ -1690,7 +1690,7 @@
           "tz": "$tz"
         }
       ],
-      "title": "To Powerwall",
+      "title": "To Powercube",
       "transparent": true,
       "type": "stat"
     },
@@ -2085,7 +2085,7 @@
     },
     {
       "aliasColors": {
-        "From Powerwall": "green"
+        "From Powercube": "green"
       },
       "bars": true,
       "dashLength": 10,
@@ -2136,7 +2136,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "From Powerwall",
+          "alias": "From Powercube",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
@@ -2181,7 +2181,7 @@
       "thresholds": [],
       "timeFrom": "1M",
       "timeRegions": [],
-      "title": "From Powerwall",
+      "title": "From Powercube",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -2603,7 +2603,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Powerwall Simple",
+  "title": "Powercube Simple",
   "uid": "RSDbqvRRzUS",
   "version": 6,
   "weekStart": ""
